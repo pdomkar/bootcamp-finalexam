@@ -1,0 +1,14 @@
+{
+  "loan": {
+    "title": "A loan calculator",
+    "submit": "Submit",
+    "months": "months",
+    "amount": "Amount:",
+    "timeToPay": "Time to pay:",
+    "monthlyPayment": "Monthly payment:",
+    "interestRate": "Interest rate:",
+    "paidAmount": "Paid amount:",
+    "continueUserData": "Continue to fill users data",
+    "money": "$"
+  }
+}

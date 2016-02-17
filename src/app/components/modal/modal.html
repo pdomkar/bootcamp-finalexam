@@ -1,0 +1,77 @@
+<div class="modal-content" ng-show="display">
+  <div class="modal-header">
+    <h2 data-translate="{{header}}"></h2>
+  </div>
+  <div class="modal-body">
+    <p data-translate="userData.thx"></p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p data-translate="userData.userData"></p>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th data-translate="userData.name"></th>
+                <td>{{userData.name}}</td>
+              </tr>
+              <tr>
+                <th data-translate="userData.surname"></th>
+                <td>{{userData.surname}}</td>
+              </tr>
+              <tr>
+                <th data-translate="userData.age"></th>
+                <td>{{userData.age}}</td>
+              </tr>
+              <tr>
+                <th data-translate="userData.street"></th>
+                <td>{{userData.street}}</td>
+              </tr>
+              <tr>
+                <th data-translate="userData.zipcode"></th>
+                <td>{{userData.zipcode}}</td>
+              </tr>
+              <tr>
+                <th data-translate="userData.email"></th>
+                <td>{{userData.email}}</td>
+              </tr>
+              <tr>
+                <th data-translate="userData.phone"></th>
+                <td>{{userData.phone}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <p data-translate="userData.loanData"></p>
+          <table class="table">
+            <tbody>
+            <tr>
+              <th data-translate="userData.amount"></th>
+              <td>{{loanData.amount | currency : '' : 0}}<span data-translate="userData.money"></span></td>
+            </tr>
+            <tr>
+              <th data-translate="userData.timeToPay"></th>
+              <td>{{loanData.timeToPay}}<span data-translate="userData.months"></span></td>
+            </tr>
+            <tr>
+              <th data-translate="userData.monthlyPayment"></th>
+              <td>{{loanData.monthlyPayment | currency : '' : 0}}<span data-translate="userData.money"></span></td>
+            </tr>
+            <tr>
+              <th data-translate="userData.interestRate"></th>
+              <td>{{loanData.interestRate}} %</td>
+            </tr>
+            <tr>
+              <th data-translate="userData.paidAmount"></th>
+              <td>{{ loanData.amount*1 + (loanData.amount*loanData.interestRate/100)*1  | currency : '' : 0}}<span data-translate="userData.money"></span></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default btn-lg" ng-click="exit()" data-translate="userData.exit"></button>
+  </div>
+</div>

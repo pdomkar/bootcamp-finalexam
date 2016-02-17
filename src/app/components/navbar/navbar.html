@@ -1,17 +1,24 @@
 <nav class="navbar navbar-static-top navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="https://github.com/Swiip/generator-gulp-angular">
-        <span class="glyphicon glyphicon-home"></span><span data-translate="home"></span>
-      </a>
+      <div class="navbar-brand">
+        <span data-translate="navbar.home"></span>
+      </div>
     </div>
-
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
       <ul class="nav navbar-nav">
-        <li class="active"><a ng-href="#" data-translate="menu1"></a></li>
-        <li><a ng-href="#" data-translate="menu1"></a></li>
-        <li><a ng-href="#" data-translate="menu1"></a></li>
+        <li ui-sref-active="active"><a ng-href="/" ui-sref="loan" data-translate="navbar.menu1"></a></li>
+        <li ui-sref-active="active" ng-show="loanData == null" class="disabled"><a ng-href="#" data-translate="navbar.menu2"></a></li>
+        <li ui-sref-active="active" ng-show="loanData != null"><a ng-href="#/userData" ui-sref="userData" data-translate="navbar.menu2"></a></li>
       </ul>
+      <div class="pull-right">
+        <button ng-if="lang==='en'" ng-click="changeLanguage('en')" class="btn btn-primary btn-xs" style="margin-top:10px;">EN</button>
+        <button ng-if="lang!=='en'" ng-click="changeLanguage('en')" class="btn btn-default btn-xs" style="margin-top:10px;">EN</button>
+        <button  ng-if="lang==='cs'" ng-click="changeLanguage('cs')" class="btn btn-primary btn-xs" style="margin-top:10px;">CZ</button>
+        <button  ng-if="lang!=='cs'" ng-click="changeLanguage('cs')" class="btn btn-default btn-xs" style="margin-top:10px;">CZ</button>
+      </div>
     </div>
+
+
   </div>
 </nav>

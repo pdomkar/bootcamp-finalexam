@@ -1,5 +1,5 @@
 {
-  "name": "lesson8",
+  "name": "finalexam",
   "version": "0.0.0",
   "dependencies": {
     "angular-cookies": "~1.4.0",
@@ -13,6 +13,9 @@
     "angular-translate-loader-partial": "~2.7.0",
     "angular": "~1.4.0",
     "angular-sanitize": "~1.4.0",
-    "angular-local-storage": "~0.2.2"
+    "angular-local-storage": "~0.2.2",
+    "seiyria-bootstrap-slider": "~5.0.13",
+    "jquery-mask-plugin": "1.13.4",
+    "angular-dynamic-locale": "0.1.30"
   }
 }

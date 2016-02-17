@@ -1,0 +1,44 @@
+{
+  "userData": {
+    "titleUserData": "Osobní data",
+    "titleLoanInfo": "Vaše půjčka",
+    "months": "měsíců",
+    "edit": "<span class=\"glyphicon glyphicon-arrow-left pull-left\" aria-hidden=\"true\"></span> Upravit",
+    "name": "Jméno:",
+    "surname": "Příjmení:",
+    "age": "Věk:",
+    "street": "Ulice:",
+    "zipcode": "PSČ:",
+    "email": "Email:",
+    "phone": "Telefon:",
+    "getLoan": "Získat půjčku",
+    "amount": "Výše půjčky",
+    "timeToPay": "Doba splatnosti",
+    "monthlyPayment": "Měsíční splátka",
+    "interestRate": "Úrok (p.a.)",
+    "paidAmount": "Zaplacená částka",
+    "thx": "Děkujeme, že jste si u nás zařídili půjčku",
+    "loanData": "Údaje půjčky",
+    "userData": "Osobní údaje",
+    "header": "Informace o dokončení půjčky",
+    "exit": "Odejít",
+    "nameR": "Vyplňte prosím vaše jméno.",
+    "surnameR": "Vyplňte prosím vaše příjmení.",
+    "ageR": "Vyplňte prosím váš věk (číslo mezi 1 a 149.).",
+    "streetR": "Vyplňte prosím vaší ulici.",
+    "zipcodeR": "Vyplňte prosím vaše PSČ.",
+    "emailR": "Vyplňte prosím váš email.",
+    "phoneR": "Vyplňte prosím váš telefon.",
+    "nameMin": "Minimální možná délka jména je 3 znaky.",
+    "surnameMin": "Minimální možná délka příjmení je 3 znaky.",
+    "streetMin": "Minimální možná délka ulice je 3 znaky.",
+    "agePos": "Věk musí být kladné číslo mezi 1 a 149.",
+    "zipcodeVal": "Vyplňte prosím validní PSČ ve tvaru: (xxx xx).",
+    "emailVal": "Vyplňte prosím validní email ve tvaru: (xxx@xxx.xx).",
+    "phoneVal": "Vyplňte prosím validní telefon ve tvaru: (xxx xxx xxx).",
+    "money": " Kč"
+
+
+
+  }
+}

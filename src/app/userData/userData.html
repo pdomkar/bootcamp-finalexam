@@ -1,0 +1,120 @@
+<div class="jumbotron text-center container">
+  <div fe-modal="" data-header="userData.header" data-display="showModal" data-user-data="user" ></div>
+
+  <div class="row">
+    <div class="col-md-7">
+      <h2 data-translate="userData.titleUserData"></h2>
+      <br>
+      <form novalidate name="userForm" ng-submit="send(userForm)" role="form" class="form-horizontal">
+        <div class="form-group">
+          <label for="uName" class="control-label col-md-2" data-translate="userData.name"></label>
+          <div class="col-md-10">
+            <input type="text" ng-model="user.name" name="uName" id="uName" class="form-control" required ng-minlength="3" /> <br />
+            <div ng-show="userForm.$submitted || userForm.uName.$dirty" class="warning-margin">
+              <span ng-show="userForm.uName.$error.required" class="warning" data-translate="userData.nameR"></span>
+              <span ng-show="userForm.uName.$error.minlength" class="warning" data-translate="userData.nameMin"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="uSurname" class="control-label col-md-2" data-translate="userData.surname"></label>
+          <div class="col-md-10">
+            <input type="text" ng-model="user.surname" name="uSurname" id="uSurname" class="form-control" required ng-minlength="3" /> <br />
+            <div ng-show="userForm.$submitted || userForm.uSurname.$dirty" class="warning-margin">
+              <span ng-show="userForm.uSurname.$error.required" class="warning" data-translate="userData.surnameR"></span>
+              <span ng-show="userForm.uSurname.$error.minlength" class="warning" data-translate="userData.surnameMin"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="uAge" class="control-label col-md-2" data-translate="userData.age"></label>
+          <div class="col-md-10">
+            <input type="number" ng-model="user.age" name="uAge" id="uAge" class="form-control" required fe-age min="1" max="149"/> <br />
+            <div ng-show="userForm.$submitted || userForm.uAge.$dirty" class="warning-margin">
+              <span ng-show="userForm.uAge.$error.required" class="warning" data-translate="userData.ageR"></span>
+              <span ng-show="userForm.uAge.$error.age" class="warning" data-translate="userData.agePos"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="uStreet" class="control-label col-md-2" data-translate="userData.street"></label>
+          <div class="col-md-10">
+            <input type="text" ng-model="user.street" name="uStreet" id="uStreet" class="form-control" required ng-minlength="3"/> <br />
+            <div ng-show="userForm.$submitted || userForm.uStreet.$dirty" class="warning-margin">
+              <span ng-show="userForm.uStreet.$error.required" class="warning" data-translate="userData.streetR"></span>
+              <span ng-show="userForm.uStreet.$error.minlength" class="warning" data-translate="userData.streetMin"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="uZipcode" class="control-label col-md-2" data-translate="userData.zipcode"></label>
+          <div class="col-md-10">
+            <input type="text" ng-model="user.zipcode" name="uZipcode" id="uZipcode" class="form-control" required fe-zipcode/> <br />
+            <div ng-show="userForm.$submitted || userForm.uZipcode.$dirty" class="warning-margin">
+              <span ng-show="userForm.uZipcode.$error.required" class="warning" data-translate="userData.zipcodeR"></span>
+              <span ng-show="userForm.uZipcode.$error.zipcode" class="warning" data-translate="userData.zipcodeVal"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="uEmail" class="control-label col-md-2" data-translate="userData.email"></label>
+          <div class="col-md-10">
+            <input type="text" ng-model="user.email" name="uEmail" id="uEmail" class="form-control" required fe-email/> <br/>
+            <div ng-show="userForm.$submitted || userForm.uEmail.$dirty" class="warning-margin">
+              <span ng-show="userForm.uEmail.$error.required" class="warning" data-translate="userData.emailR"></span>
+              <span ng-show="userForm.uEmail.$error.email" class="warning" data-translate="userData.emailVal"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="uPhone" class="control-label col-md-2" data-translate="userData.phone"></label>
+          <div class="col-md-10">
+            <input type="text" ng-model="user.phone" name="uPhone" id="uPhone" class="form-control" required fe-phone/> <br />
+            <div ng-show="userForm.$submitted || userForm.uPhone.$dirty" class="warning-margin">
+              <span ng-show="userForm.uPhone.$error.required" class="warning" data-translate="userData.phoneR"></span>
+              <span ng-show="userForm.uPhone.$error.phone" class="warning" data-translate="userData.phoneVal"></span>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-success btn pull-right" ng-disabled="!userForm.$valid" data-translate="userData.getLoan"></button>
+      </form>
+    </div>
+
+    <div class="col-md-5">
+      <h2 data-translate="userData.titleLoanInfo"></h2>
+      <br>
+      <table class="table bWhite">
+        <tbody>
+          <tr>
+            <th data-translate="userData.amount"></th>
+            <td>{{loanData.amount | currency : '' : 0}}<span data-translate="userData.money"></span></td>
+          </tr>
+          <tr>
+            <th data-translate="userData.timeToPay"></th>
+            <td>{{loanData.timeToPay}}<span data-translate="userData.months"></span></td>
+          </tr>
+          <tr>
+            <th data-translate="userData.monthlyPayment"></th>
+            <td>{{loanData.monthlyPayment | currency : '' : 0}}<span data-translate="userData.money"></span></td>
+          </tr>
+          <tr>
+            <th data-translate="userData.interestRate"></th>
+            <td>{{loanData.interestRate}} %</td>
+          </tr>
+          <tr>
+            <th data-translate="userData.paidAmount"></th>
+            <td>{{ loanData.amount*1 + (loanData.amount*loanData.interestRate/100)*1 | currency : '' : 0}}<span data-translate="userData.money"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <a ng-href="/" class="btn btn-info col-md-6" data-translate="userData.edit">  </a>
+    </div>
+  </div>
+</div>

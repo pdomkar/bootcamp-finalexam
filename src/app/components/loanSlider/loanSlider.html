@@ -1,0 +1,29 @@
+<label class="col-sm-2 form-control-label" data-translate="{{label}}"></label>
+<div class="col-sm-10">
+
+  <div ng-if="type=='amount'">
+    <div style="display: table;" class="col-md-12">
+      <input type="text" class="form-control col-md-11" style="width:90%"  data-ng-model="model" name="sliderText" ng-blur="changed(model);" />
+      <div class="col-md-1 units" data-translate="loan.money"></div>
+    </div>
+  </div>
+  <div ng-if="type=='timeToPay'">
+    <div style="display: table;" class="col-md-12">
+      <input type="text" class="form-control col-sm-11" style="width:90%" data-ng-model="model" name="sliderText" ng-blur="changed(model);" >
+      <div class="col-md-1 units" data-translate="loan.months"></div>
+    </div>
+  </div>
+  <div ng-if="type=='monthlyPayment'">
+    <div style="display: table;" class="col-md-12">
+      <input readonly type="text" class="form-control col-sm-11" style="width:90%" data-ng-model="model" name="sliderText" ng-blur="changed(model);" >
+      <div class="col-md-1 units"  data-translate="loan.money"></div>
+    </div>
+  </div>
+
+  <span ng-if="type==='timeToPay'" style="margin-right:15px;">{{locRange.min | currency : '' : 0}} <span data-translate="loan.months"></span></span>
+  <span ng-if="type!=='timeToPay'" style="margin-right:15px;">{{locRange.min | currency : '' : 0}}<span data-translate="loan.money"></span></span>
+  <input class="col-sm-12"  style="width:60%"type="text" name="slider" data-ng-model="model" ng-change="change()"/>
+  <span ng-if="type==='timeToPay'" style="margin-left:15px;">{{locRange.max | currency : '' : 0}} <span data-translate="loan.months"></span></span>
+  <span ng-if="type!=='timeToPay'" style="margin-left:15px;">{{locRange.max | currency : '' : 0}}<span data-translate="loan.money"></span></span>
+</div>
+

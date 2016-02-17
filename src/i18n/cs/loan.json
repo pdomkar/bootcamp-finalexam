@@ -1,0 +1,14 @@
+{
+  "loan": {
+    "title": "Kalkulačka půjčky",
+    "submit": "Odeslat",
+    "months": "měsíců",
+    "amount": "Výše půjčky:",
+    "timeToPay": "Doba splatnosti:",
+    "monthlyPayment": "Měsíční splátka:",
+    "interestRate": "Úrok (p.a.):",
+    "paidAmount": "Zaplacená částka:",
+    "continueUserData": "Pokračovat na vyplnění osobních údajů",
+    "money": " Kč"
+  }
+}

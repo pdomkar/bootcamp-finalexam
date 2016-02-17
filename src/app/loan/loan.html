@@ -1,0 +1,51 @@
+<div class="jumbotron text-center container">
+  <h2 data-translate="loan.title"></h2>
+  <br />
+  <div class="row">
+    <div class="col-md-8">
+      <form class="form" role="form" novalidate name="loanForm" ng-submit="continue()">
+        <div class="form-group row">
+            <div fe-loan-slider label="loan.amount" model="loanData.amount" change="amountChange()" range="null" type="amount"></div>
+        </div>
+        <div class="form-group row">
+          <div fe-loan-slider label="loan.timeToPay" model="loanData.timeToPay" change="timeToPayChange()" range="rangeTime" type="timeToPay"></div>
+        </div>
+        <div class="form-group row">
+          <div fe-loan-slider label="loan.monthlyPayment" model="loanData.monthlyPayment" change="monthlyPaymentChange()" range="rangePayment" type="monthlyPayment"></div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <button type="submit" class="btn btn-success pull-right" data-translate="loan.continueUserData"></button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-4">
+      <table class="table bWhite">
+        <tbody>
+        <tr>
+          <th data-translate="loan.amount"></th>
+          <td>{{loanData.amount | currency : '' : 0}}<span data-translate="loan.money"></span></td>
+        </tr>
+        <tr>
+          <th data-translate="loan.timeToPay"></th>
+          <td>{{loanData.timeToPay}} <span data-translate="loan.months"></span></td>
+        </tr>
+        <tr>
+          <th data-translate="loan.monthlyPayment"></th>
+          <td>{{loanData.monthlyPayment | currency : '' : 0}}<span data-translate="loan.money"></span></td>
+        </tr>
+        <tr>
+          <th data-translate="loan.interestRate"></th>
+          <td>{{loanData.interestRate}} %</td>
+        </tr>
+        <tr>
+          <th data-translate="loan.paidAmount"></th>
+          <td>{{ loanData.amount*1 + (loanData.amount*loanData.interestRate/100)*1  | currency : '' : 0 }}<span data-translate="loan.money"></span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

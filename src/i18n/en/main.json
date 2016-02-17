@@ -1,9 +1,9 @@
 {
-  "title": "Lesson 8",
+  "title": "Final exam",
   "navbar": {
-    "home": "Lesson 8",
-    "menu1": "Menu 1",
-    "menu2": "Menu 2",
-    "menu3": "Menu 3"
+    "home": "Final exam",
+    "menu1": "Loan information",
+    "menu2": "User data",
+    "money": "$"
   }
 }

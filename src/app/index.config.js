@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('lesson8')
+    .module('finalexam')
     .config(config);
 
   /** @ngInject */
